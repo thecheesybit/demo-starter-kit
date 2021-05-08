@@ -5,6 +5,8 @@ import fire from "./fire";
 import Login from "./login";
 import Hero from "./hero";
 
+
+// useState variables used in the project
 const App = () => {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
@@ -13,6 +15,7 @@ const App = () => {
   const [passwordError, setPasswordError] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
 
+  // here to make the code cleaner
   const clearInputs = () => {
     setEmail("");
     setPassword("");
@@ -80,6 +83,7 @@ const App = () => {
     authListener();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  
   return (
     <div className="App">
       {user ? (
